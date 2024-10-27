@@ -1,0 +1,41 @@
+
+//USAR LA BASE DE DATOS
+use("Dulceria")
+
+
+//crear la coleccion de ususarios
+db.createCollection("Usuarios", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['email', 'contrasena', 'rol'],
+            properties: {
+                idUsuario: {
+                    bsonType: 'string',
+                    description: 'email del usuario'
+                },
+                apellidoP: {
+                    bsonType: 'string',
+                    description: 'contraseña de 8 aa 20 caracteres'
+                },
+                apellidoM: {
+                    bsonType: 'string'
+                },
+                nombres: {
+                    bsonType: 'string'
+                },
+                email: {
+                    bsonType: 'string',
+                    pattern: "^[A-Za-z\\d.-]{1,}@[A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$"
+                },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
