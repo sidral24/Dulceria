@@ -1,17 +1,18 @@
-
-//USAR LA BASE DE DATOS
 use("Dulceria")
 
 
 //crear la coleccion de ususarios
-db.createCollection("Usuarios", {
+db.createCollection("Trabajadores", {
     validator: {
         $jsonSchema: {
             bsonType: "object",
             title: 'valdacion del objeto usuarios',
-            required: ['email', 'idUsuario'],
+            required: ['idTrabajador', 'idSucursal'],
             properties: {
-                idUsuario: {
+                idTrabajador: {
+                    bsonType: 'int'
+                },
+                idSucursal: {
                     bsonType: 'int'
                 },
                 apellidoP: {
@@ -23,9 +24,17 @@ db.createCollection("Usuarios", {
                 nombres: {
                     bsonType: 'string'
                 },
-                email: {
-                    bsonType: 'string',
-                    pattern: "^[A-Za-z\\d.-]{1,}@[A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$"
+                fechaNac: {
+                    bsonType: 'date'
+                },
+                fechaIngreso: {
+                    bsonType: 'date'
+                },
+                rfc: {
+                    bsonType: 'string'
+                },
+                tipo: {
+                    bsonType: 'string'
                 },
                 telefono: {
                     bsonType: 'array',

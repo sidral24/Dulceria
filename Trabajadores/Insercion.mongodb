@@ -1,0 +1,15 @@
+use("Dulceria")
+
+//insertar datos
+db.Trabajadores.insertOne({
+    idTrabajador: 1,
+    idSucursal: 1,
+    apellidoP: 'Salvatierra',
+    apellidoM: 'Del Bosque',
+    nombres: 'Juan',
+    fechaNac: '20-04-1995',
+    fechaIngreso: '20-04-2020',
+    rfc: 'asdfhkasfdsdf',
+    tipo: 'asdfasdfa',
+    telefono: ['3536985564']
+})
