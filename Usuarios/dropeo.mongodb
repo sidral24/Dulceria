@@ -1,0 +1,3 @@
+use("Dulceria")
+
+db.Usuarios.drop()

@@ -12,12 +12,10 @@ db.createCollection("Usuarios", {
             required: ['email', 'contrasena', 'rol'],
             properties: {
                 idUsuario: {
-                    bsonType: 'string',
-                    description: 'email del usuario'
+                    bsonType: 'int'
                 },
                 apellidoP: {
-                    bsonType: 'string',
-                    description: 'contraseña de 8 aa 20 caracteres'
+                    bsonType: 'string'
                 },
                 apellidoM: {
                     bsonType: 'string'

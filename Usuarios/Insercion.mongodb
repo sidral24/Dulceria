@@ -1,0 +1,11 @@
+use("Dulceria")
+
+//insertar datos
+db.Usuarios.insertOne({
+    idUsuario: 1,
+    apellidoP: 'Hernandez',
+    apellidoM: 'Galvez',
+    nombres: 'Armando',
+    email: 'asdfasfd@gmail.com',
+    telefono: ['3531802654']
+})
