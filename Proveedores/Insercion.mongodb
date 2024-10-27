@@ -1,0 +1,16 @@
+use("Dulceria")
+
+//insertar datos
+db.Proveedores.insertOne({
+    idProveedor: 1,
+    nombre: 'La coculense',
+    rfc: 'asdasfasf',
+    Direccion: {
+        Calle: 'generica',
+        Ciudad: 'guadalajara',
+        Region: 'Cienega',
+        CodigoPostal: '59342',
+        Pais: 'Mexico',
+    },
+    telefono: ['3539639899']
+})

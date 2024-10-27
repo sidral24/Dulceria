@@ -7,8 +7,8 @@ db.Trabajadores.insertOne({
     apellidoP: 'Salvatierra',
     apellidoM: 'Del Bosque',
     nombres: 'Juan',
-    fechaNac: '20-04-1995',
-    fechaIngreso: '20-04-2020',
+    fechaNac: new Date(1997, 6, 12),
+    fechaIngreso: new Date(),
     rfc: 'asdfhkasfdsdf',
     tipo: 'asdfasdfa',
     telefono: ['3536985564']
