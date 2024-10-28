@@ -46,3 +46,11 @@ db.createCollection("Trabajadores", {
         }
     }
 })
+
+db.Trabajadores.createIndex(
+    {
+        idSucursal: 1,
+        idTrabajador: 1
+    },
+    { unique: true }
+)
