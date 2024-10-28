@@ -1,0 +1,12 @@
+use("Dulceria")
+
+//insertar datos
+db.materias_primas.insertOne({
+    id_mp: 1,
+    nombre: 'Calabaza',
+    tipo: 'Liquido',
+    lote: '20001',
+    existencia: 20,
+    fecha_cad: new Date(),
+    precio: 30
+})

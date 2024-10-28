@@ -1,0 +1,30 @@
+//Usar la base de datos
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("materias_primas", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Materias Primas',
+            required: ['id_mp', 'nombre', 'lote', 'fecha_cad', 'precio'],
+            properties: {
+                id_mp: { bsonType: 'int' },
+                nombre: { bsonType: 'string' },
+                tipo: { bsonType: 'string' },
+                lote: { bsonType: 'string' },
+                existencia: { bsonType: 'int' },
+                fecha_cad: { bsonType: 'date' },
+                precio: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+
+db.materias_primas.createIndex(
+    { id_mp: 1, nombre: 1 },
+    { unique: true }
+)
+
+db.materias_primas.drop()
