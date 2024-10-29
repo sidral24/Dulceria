@@ -1,0 +1,31 @@
+//Usar la base de datos
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("dulces", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Dulces',
+            required: ['id_dulce', 'nombre', 'precio_uni', 'lote'],
+            properties: {
+                id_dulce: { bsonType: 'int' },
+                nombre: { bsonType: 'string' },
+                precio_uni: { bsonType: 'int' },
+                stock: { bsonType: 'int' },
+                lote: { bsonType: 'string' },
+                fecha_cad: { bsonType: 'date' },
+                reorden: { bsonType: 'int' },
+                tipo: { enum: ['Con Azucar', 'Sin Azucar'] }
+            }
+        }
+    }
+})
+
+
+db.dulces.createIndex(
+    { id_dulce: 1 },
+    { unique: true }
+)
+
+db.dulces.drop()

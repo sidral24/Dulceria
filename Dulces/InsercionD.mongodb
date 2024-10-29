@@ -1,0 +1,13 @@
+use("Dulceria")
+
+//insertar datos
+db.dulces.insertOne({
+    id_dulce: 1,
+    nombre: 'Chongo',
+    precio_uni: 20,
+    stock: 20,
+    lote: '20121',
+    fecha_cad: new Date(),
+    reorden: 10,
+    tipo: 'Con Azucar'
+})
