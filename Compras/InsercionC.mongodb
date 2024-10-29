@@ -1,0 +1,13 @@
+use("Dulceria")
+
+//insertar datos
+db.compras.insertOne({
+    id_compra: 1,
+    id_proveedor: 1,
+    id_mp: 1,
+    fecha_compra: new Date(),
+    lote: '29312',
+    cantidad: '20L',
+    precio: 20,
+    descuento: 10
+})
