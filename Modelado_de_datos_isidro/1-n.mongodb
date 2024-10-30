@@ -57,7 +57,6 @@ db.Trabajadores.createIndex(
 //MODELADO 1-N EMBEBIDO
 use("Dulceria")
 
-//Crear la conexion de usuarios
 db.createCollection("compras", {
     validator: {
         $jsonSchema: {
@@ -69,15 +68,9 @@ db.createCollection("compras", {
                 Proveedor: { //EMBEBIENDO A LA TABLA DE PROVEEDORES
                     required: ['idProveedor', 'nombre', 'rfc'],
                     properties: {
-                        idProveedor: {
-                            bsonType: 'int'
-                        },
-                        nombre: {
-                            bsonType: 'string'
-                        },
-                        rfc: {
-                            bsonType: 'string',
-                        },
+                        idProveedor: { bsonType: 'int' },
+                        nombre: { bsonType: 'string' },
+                        rfc: { bsonType: 'string' },
                         Direccion: {
                             bsonType: "object",
                             title: 'Validación del objeto Address',
