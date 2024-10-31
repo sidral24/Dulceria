@@ -1,0 +1,11 @@
+use("Dulceria")
+
+//insertar datos
+db.dulces.insertOne({
+    id_elaboracion: 1,
+    id_fabrica: 1,
+    id_trabajador: 1,
+    id_mp: 1,
+    id_dulce: 1,
+    cantidad: 20
+})

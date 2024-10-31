@@ -1,0 +1,77 @@
+//1:1 Referenciada
+use("Dulceria")
+
+//crear la coleccion de ususarios
+db.createCollection("Usuarios", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['email', 'idUsuario', 'idNombre'],
+            properties: {
+                idUsuario: {
+                    bsonType: 'int'
+                },
+                idNombre: { // REFERENCIADA A NOMBRE
+                    bsonType: 'int'
+                },
+                email: {
+                    bsonType: 'string',
+                    pattern: "^[A-Za-z\\d.-]{1,}@[A-Za-z\\d.-]{1,}[.][A-Za-z\\d.-]{1,}$"
+                },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
+
+db.Usuarios.createIndex(
+    { idUsuario: 1, email: 1 },
+    { unique: true }
+)
+
+db.Usuarios.drop()
+
+
+
+
+//1:1 EMBEBIDA
+use("Dulceria")
+
+//Crear la conexion de repartos
+db.createCollection("repartos", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto repartos',
+            required: ['id_repartos'],
+            properties: {
+                id_repartos: { bsonType: 'int' },
+                cantidad: { bsonType: 'int' },
+                fecha_reparto: {
+                    bsonType: "object",
+                    required: ['año', 'mes', 'dias', 'hora'],
+                    properties: {
+                        año: { bsonType: 'int' },
+                        mes: { bsonType: 'int' },
+                        dia: { bsonType: 'int' },
+                        hora: { bsonType: 'int' }
+                    }
+                }
+            }
+        }
+    }
+})
+
+
+db.repartos.createIndex(
+    { id_repartos: 1 },
+    { unique: true }
+)
+
+db.repartos.drop()

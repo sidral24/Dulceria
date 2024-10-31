@@ -1,0 +1,13 @@
+use("Dulceria")
+
+//insertar datos
+db.dulces.insertOne({
+    id_fabrica: 1,
+    telefono: '3512230747',
+    nom_responsable: 'Jose Pedro Manzano',
+    estado: 'Michoacan',
+    municipio: 'Zamora',
+    colonia: 'Salinas',
+    domicilio: 'Conocida',
+    cp: '58644'
+})

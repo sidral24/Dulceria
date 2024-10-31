@@ -1,0 +1,29 @@
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("repartos", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto repartos',
+            required: ['id_fabrica', 'id_repartos', 'id_sucursal', 'id_trabajador', 'id_dulce'],
+            properties: {
+                id_repartos: { bsonType: 'int' },
+                id_fabrica: { bsonType: 'int' },
+                id_sucursal: { bsonType: 'int' },
+                id_trabajador: { bsonType: 'int' },
+                id_dulce: { bsonType: 'int' },
+                cantidad: { bsonType: 'int' },
+                fecha_reparto: { bsonType: 'date' }
+            }
+        }
+    }
+})
+
+
+db.repartos.createIndex(
+    { nom_responsable: 1 },
+    { unique: true }
+)
+
+db.repartos.drop()

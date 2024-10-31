@@ -1,0 +1,69 @@
+// 1:N REFERENCIADA
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("ventas", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Ventas',
+            required: ['id_venta', 'id_usuario', 'cantidad'],
+            properties: {
+                id_venta: { bsonType: 'int' },
+                id_usuario: { bsonType: 'int' },//REFERENCIADA
+                cantidad: { bsonType: 'int' },
+                fecha: { bsonType: 'date' },
+                precio_uni: { bsonType: 'int' },
+                descuento: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+db.ventas.createIndex(
+    { id_venta: 1 },
+    { unique: true }
+)
+
+db.ventas.drop()
+
+
+
+// 1:N EMBEBIDA
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("elaboracion", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Dulces',
+            required: ['id_elaboracion', 'cantidad'],
+            properties: {
+                id_elaboracion: { bsonType: 'int' },
+                dulces: {//EMBEBIDO
+                    bsonType: 'object',
+                    required: ['id_dulce', 'nombre', 'precio_uni', 'lote'],
+                    properties: {
+                        id_dulce: { bsonType: 'int' },
+                        nombre: { bsonType: 'string' },
+                        precio_uni: { bsonType: 'int' },
+                        stock: { bsonType: 'int' },
+                        lote: { bsonType: 'string' },
+                        fecha_cad: { bsonType: 'date' },
+                        reorden: { bsonType: 'int' },
+                        tipo: { enum: ['Con Azucar', 'Sin Azucar'] }
+                    }
+                },
+                cantidad: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+db.elaboracion.createIndex(
+    { id_elaboracion: 1 },
+    { unique: true }
+)
+
+db.elaboracion.drop()

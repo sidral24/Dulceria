@@ -1,0 +1,29 @@
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("ventas", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Ventas',
+            required: ['id_venta', 'id_usuario', 'id_sucursal', 'id_dulce', 'cantidad'],
+            properties: {
+                id_venta: { bsonType: 'int' },
+                id_usuario: { bsonType: 'int' },
+                id_sucursal: { bsonType: 'int' },
+                id_dulce: { bsonType: 'int' },
+                cantidad: { bsonType: 'int' },
+                fecha: { bsonType: 'date' },
+                precio_uni: { bsonType: 'int' },
+                descuento: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+db.ventas.createIndex(
+    { id_venta: 1 },
+    { unique: true }
+)
+
+db.ventas.drop()

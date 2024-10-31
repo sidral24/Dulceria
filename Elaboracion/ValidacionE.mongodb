@@ -1,0 +1,29 @@
+//Usar la base de datos
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("elaboracion", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Dulces',
+            required: ['id_dulce', 'id_elaboracion', 'id_fabrica', 'id_trabajdor', 'id_mp', 'cantidad'],
+            properties: {
+                id_elaboracion: { bsonType: 'int' },
+                id_fabrica: { bsonType: 'int' },
+                id_trabajador: { bsonType: 'int' },
+                id_mp: { bsonType: 'int' },
+                id_dulce: { bsonType: 'int' },
+                cantidad: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+
+db.elaboracion.createIndex(
+    { id_elaboracion: 1 },
+    { unique: true }
+)
+
+db.elaboracion.drop()
