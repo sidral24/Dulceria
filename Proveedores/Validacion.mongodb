@@ -7,7 +7,7 @@ db.createCollection("Proveedores", {
         $jsonSchema: {
             bsonType: "object",
             title: 'valdacion del objeto usuarios',
-            required: ['idProveedor'],
+            required: ['idProveedor', 'nombre', 'rfc'],
             properties: {
                 idProveedor: {
                     bsonType: 'int'
@@ -40,3 +40,10 @@ db.createCollection("Proveedores", {
         }
     }
 })
+db.Proveedores.createIndex(
+    {
+        email: 1,
+        idProveedor: 1
+    },
+    { unique: true }
+)
