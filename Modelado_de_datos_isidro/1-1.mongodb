@@ -1,0 +1,87 @@
+//MODELADO 1-1 DE MANERA EMBEBIDA
+use("Dulceria")
+
+db.createCollection("Proveedores", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['idProveedor', 'nombre', 'rfc'],
+            properties: {
+                idProveedor: {
+                    bsonType: 'int'
+                },
+                nombre: {
+                    bsonType: 'string'
+                },
+                rfc: {
+                    bsonType: 'string',
+                },
+                Direccion: { //EMBEBIENDO A LA TABLA DE DIRECCIONES
+                    bsonType: "object",
+                    title: 'Validación del objeto Address',
+                    required: ['Calle', 'Ciudad', 'CodigoPostal', 'Pais'],
+                    properties: {
+                        Calle: { bsonType: 'string' },
+                        Ciudad: { bsonType: 'string' },
+                        Region: { bsonType: 'string' },
+                        CodigoPostal: { bsonType: 'string' },
+                        Pais: { bsonType: 'string' },
+                    }
+                },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
+db.Proveedores.createIndex(
+    {
+        email: 1,
+        idProveedor: 1
+    },
+    { unique: true }
+)
+
+
+
+//MODELADO 1-1 DE MANERA REFERENCIADA
+
+use("Dulceria")
+
+db.createCollection("Trabajadores", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['idTrabajador', 'idSucursal', 'idNombre'],
+            properties: {
+                idTrabajador: { bsonType: 'int' },
+                idSucursal: { bsonType: 'int' },
+                idNombre: { bsonType: 'int' },
+                fechaNac: { bsonType: 'date' },
+                fechaIngreso: { bsonType: 'date' },
+                rfc: { bsonType: 'string' },
+                tipo: { bsonType: 'string' },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
+
+db.Trabajadores.createIndex(
+    {
+        idSucursal: 1,
+        idTrabajador: 1
+    },
+    { unique: true }
+)

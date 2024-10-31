@@ -1,0 +1,111 @@
+// MODELADO 1-N REFERENCIADO
+use("Dulceria")
+
+db.createCollection("Trabajadores", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['idTrabajador', 'idSucursal'],
+            properties: {
+                idTrabajador: {
+                    bsonType: 'int'
+                },
+                idSucursal: {
+                    bsonType: 'int'
+                },
+                apellidoP: {
+                    bsonType: 'string'
+                },
+                apellidoM: {
+                    bsonType: 'string'
+                },
+                nombres: {
+                    bsonType: 'string'
+                },
+                fechaNac: {
+                    bsonType: 'date'
+                },
+                fechaIngreso: {
+                    bsonType: 'date'
+                },
+                rfc: {
+                    bsonType: 'string'
+                },
+                tipo: {
+                    bsonType: 'string'
+                },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
+
+db.Trabajadores.createIndex(
+    {
+        idSucursal: 1,
+        idTrabajador: 1
+    },
+    { unique: true }
+)
+
+//MODELADO 1-N EMBEBIDO
+use("Dulceria")
+
+db.createCollection("compras", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Compras',
+            required: ['id_mp', 'id_compra', 'id_proveedor', 'lote', 'cantidad', 'precio'],
+            properties: {
+                id_compra: { bsonType: 'int' },
+                Proveedor: { //EMBEBIENDO A LA TABLA DE PROVEEDORES
+                    required: ['idProveedor', 'nombre', 'rfc'],
+                    properties: {
+                        idProveedor: { bsonType: 'int' },
+                        nombre: { bsonType: 'string' },
+                        rfc: { bsonType: 'string' },
+                        Direccion: {
+                            bsonType: "object",
+                            title: 'Validación del objeto Address',
+                            required: ['Calle', 'Ciudad', 'CodigoPostal', 'Pais'],
+                            properties: {
+                                Calle: { bsonType: 'string' },
+                                Ciudad: { bsonType: 'string' },
+                                Region: { bsonType: 'string' },
+                                CodigoPostal: { bsonType: 'string' },
+                                Pais: { bsonType: 'string' },
+                            }
+                        },
+                        telefono: {
+                            bsonType: 'array',
+                            minItems: 1, //Especificar el minimo requerido
+                            uniqueItems: true, //No telefonos repetidos
+                            items: { bsonType: 'string' }
+                        }
+                    }
+                },
+                id_mp: { bsonType: 'int' },
+                fecha_compra: { bsonType: 'date' },
+                lote: { bsonType: 'string' },
+                cantidad: { bsonType: 'string' },
+                precio: { bsonType: 'int' },
+                descuento: { bsonType: 'int' }
+            }
+        }
+    }
+})
+
+
+db.compras.createIndex(
+    { id_compra: 1 },
+    { unique: true }
+)
+
+db.compras.drop()
