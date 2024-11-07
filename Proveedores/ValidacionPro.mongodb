@@ -1,0 +1,29 @@
+use("Dulceria")
+
+
+//crear la coleccion de ususarios
+db.createCollection("Proveedores", {
+    validator: {
+        $jsonSchema: {
+            bsonType: "object",
+            title: 'valdacion del objeto usuarios',
+            required: ['id_proveedor', 'nombre', 'rfc', 'direccion'],
+            properties: {
+                id_proveedor: { bsonType: 'int' },
+                nombre: { bsonType: 'string' },
+                rfc: { bsonType: 'string' },
+                direccion: { bsonType: "string" },
+                telefono: {
+                    bsonType: 'array',
+                    minItems: 1, //Especificar el minimo requerido
+                    uniqueItems: true, //No telefonos repetidos
+                    items: { bsonType: 'string' }
+                }
+            }
+        }
+    }
+})
+db.Proveedores.createIndex(
+    { idProveedor: 1 },
+    { unique: true }
+)

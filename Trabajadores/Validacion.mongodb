@@ -2,40 +2,29 @@ use("Dulceria")
 
 
 //crear la coleccion de ususarios
-db.createCollection("Trabajadores", {
+db.createCollection("trabajadores", {
     validator: {
         $jsonSchema: {
             bsonType: "object",
             title: 'valdacion del objeto usuarios',
-            required: ['idTrabajador', 'idSucursal'],
+            required: ['id_trabajador', 'id_sucursal', 'nombre', 'rfc'],
             properties: {
-                idTrabajador: {
-                    bsonType: 'int'
+                id_trabajador: { bsonType: 'int' },
+                id_sucursal: { bsonType: 'int' },
+                nombre: {
+                    bsonType: "object",
+                    title: 'Validación del objeto Address',
+                    required: ['apellido_paterno', 'nombres'],
+                    properties: {
+                        apellido_paterno: { bsonType: 'string' },
+                        apellido_materno: { bsonType: 'string' },
+                        nombres: { bsonType: 'string' },
+                    }
                 },
-                idSucursal: {
-                    bsonType: 'int'
-                },
-                apellidoP: {
-                    bsonType: 'string'
-                },
-                apellidoM: {
-                    bsonType: 'string'
-                },
-                nombres: {
-                    bsonType: 'string'
-                },
-                fechaNac: {
-                    bsonType: 'date'
-                },
-                fechaIngreso: {
-                    bsonType: 'date'
-                },
-                rfc: {
-                    bsonType: 'string'
-                },
-                tipo: {
-                    bsonType: 'string'
-                },
+                fechaNac: { bsonType: 'date' },
+                fechaIngreso: { bsonType: 'date' },
+                rfc: { bsonType: 'string' },
+                tipo: { bsonType: 'string' },
                 telefono: {
                     bsonType: 'array',
                     minItems: 1, //Especificar el minimo requerido
@@ -49,8 +38,8 @@ db.createCollection("Trabajadores", {
 
 db.Trabajadores.createIndex(
     {
-        idSucursal: 1,
-        idTrabajador: 1
+        id_sucursal: 1,
+        id_trabajador: 1
     },
     { unique: true }
 )

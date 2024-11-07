@@ -4,24 +4,25 @@ use("Dulceria")
 
 
 //crear la coleccion de ususarios
-db.createCollection("Usuarios", {
+db.createCollection("usuarios", {
     validator: {
         $jsonSchema: {
             bsonType: "object",
             title: 'valdacion del objeto usuarios',
-            required: ['email', 'idUsuario'],
+            required: ['email', 'id_usuario'],
             properties: {
-                idUsuario: {
+                id_usuario: {
                     bsonType: 'int'
                 },
-                apellidoP: {
-                    bsonType: 'string'
-                },
-                apellidoM: {
-                    bsonType: 'string'
-                },
-                nombres: {
-                    bsonType: 'string'
+                nombre: {
+                    bsonType: "object",
+                    title: 'Validación del objeto nombre',
+                    required: ['apellido_paterno', 'nombres'],
+                    properties: {
+                        apellido_paterno: { bsonType: 'string' },
+                        apellido_materno: { bsonType: 'string' },
+                        nombres: { bsonType: 'string' },
+                    }
                 },
                 email: {
                     bsonType: 'string',

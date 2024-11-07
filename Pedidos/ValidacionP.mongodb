@@ -1,0 +1,30 @@
+//Usar la base de datos
+use("Dulceria")
+
+//Crear la conexion de usuarios
+db.createCollection("pedidos", {
+    validator: {
+        $jsonSchema: {
+            bsonType: 'object',
+            title: 'Validacion del objeto Compras',
+            required: ['id_pedido', 'id_usuario', 'id_sucursal', 'id_dulce', 'cantidad', 'precio'],
+            properties: {
+                id_pedido: { bsonType: 'int' },
+                id_usuario: { bsonType: 'int' },
+                id_sucursal: { bsonType: 'int' },
+                id_dulce: { bsonType: 'int' },
+                cantidad: { bsonType: 'int' },
+                fecha_pedido: { bsonType: 'date' },
+
+            }
+        }
+    }
+})
+
+
+db.compras.createIndex(
+    { id_pedido: 1 },
+    { unique: true }
+)
+
+db.compras.drop()
