@@ -1,0 +1,105 @@
+use("Dulceria")
+
+//insertar datos
+db.sucursales.insertMany(
+    [
+        {
+            "id_sucursal": 1,
+            "nom_responsable": "Pedro Sánchez",
+            "telefono": [
+                "5551234567"
+            ],
+            "direccion": {
+                "estado": "Ciudad de México",
+                "municipio": "Coyoacán",
+                "colonia": "Col. Alegre",
+                "domicilio": "Avenida Azucarera 101",
+                "cp": 4360
+            }
+        },
+        {
+            "id_sucursal": 2,
+            "nom_responsable": "María López",
+            "telefono": [
+                "5552345678"
+            ],
+            "direccion": {
+                "estado": "Jalisco",
+                "municipio": "Guadalajara",
+                "colonia": "Col. Dulce",
+                "domicilio": "Calle de la Chocolatería 202",
+                "cp": 44100
+            }
+        },
+        {
+            "id_sucursal": 3,
+            "nom_responsable": "José Fernández",
+            "telefono": [
+                "5553456789"
+            ],
+            "direccion": {
+                "estado": "Nuevo León",
+                "municipio": "Monterrey",
+                "colonia": "Col. Sabrosa",
+                "domicilio": "Boulevard de los Caramelos 303",
+                "cp": 64000
+            }
+        },
+        {
+            "id_sucursal": 4,
+            "nom_responsable": "Laura Torres",
+            "telefono": [
+                "5554567890"
+            ],
+            "direccion": {
+                "estado": "Puebla",
+                "municipio": "Puebla",
+                "colonia": "Col. Fresa",
+                "domicilio": "Calle de los Bombones 404",
+                "cp": 72000
+            }
+        },
+        {
+            "id_sucursal": 5,
+            "nom_responsable": "Carlos Ramírez",
+            "telefono": [
+                "5555678901"
+            ],
+            "direccion": {
+                "estado": "Veracruz",
+                "municipio": "Veracruz",
+                "colonia": "Col. Miel",
+                "domicilio": "Calle de la Galleta 505",
+                "cp": 91700
+            }
+        },
+        {
+            "id_sucursal": 6,
+            "nom_responsable": "Ana Martínez",
+            "telefono": [
+                "5556789012"
+            ],
+            "direccion": {
+                "estado": "Yucatán",
+                "municipio": "Mérida",
+                "colonia": "Col. Regaliz",
+                "domicilio": "Avenida Dulzura 606",
+                "cp": 97000
+            }
+        },
+        {
+            "id_sucursal": 7,
+            "nom_responsable": "Luis García",
+            "telefono": [
+                "5557890123"
+            ],
+            "direccion": {
+                "estado": "Quintana Roo",
+                "municipio": "Cancún",
+                "colonia": "Col. Mango",
+                "domicilio": "Calle de los Chicles 707",
+                "cp": 77500
+            }
+        }
+    ]
+)

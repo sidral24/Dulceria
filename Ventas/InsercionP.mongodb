@@ -1,0 +1,207 @@
+use("Dulceria")
+
+//insertar datos
+db.ventas.insertMany(
+    [
+        {
+            "id_venta": 1,
+            "id_usuario": 1,
+            "id_sucursal": 1,
+            "id_dulce": 1,
+            "cantidad": 2,
+            "fecha": new Date("2024-10-01"),
+            "precio_uni": 50.0000,
+            "descuento": 5
+        },
+        {
+            "id_venta": 2,
+            "id_usuario": 2,
+            "id_sucursal": 1,
+            "id_dulce": 2,
+            "cantidad": 5,
+            "fecha": new Date("2024-10-02"),
+            "precio_uni": 60.0000,
+            "descuento": 10
+        },
+        {
+            "id_venta": 3,
+            "id_usuario": 3,
+            "id_sucursal": 2,
+            "id_dulce": 3,
+            "cantidad": 1,
+            "fecha": new Date("2024-10-03"),
+            "precio_uni": 30.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 4,
+            "id_usuario": 4,
+            "id_sucursal": 2,
+            "id_dulce": 4,
+            "cantidad": 3,
+            "fecha": new Date("2024-10-04"),
+            "precio_uni": 20.0000,
+            "descuento": 2
+        },
+        {
+            "id_venta": 5,
+            "id_usuario": 5,
+            "id_sucursal": 3,
+            "id_dulce": 5,
+            "cantidad": 10,
+            "fecha": new Date("2024-10-05"),
+            "precio_uni": 40.0000,
+            "descuento": 5
+        },
+        {
+            "id_venta": 6,
+            "id_usuario": 6,
+            "id_sucursal": 3,
+            "id_dulce": 1,
+            "cantidad": 4,
+            "fecha": new Date("2024-10-06"),
+            "precio_uni": 50.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 7,
+            "id_usuario": 7,
+            "id_sucursal": 4,
+            "id_dulce": 2,
+            "cantidad": 6,
+            "fecha": new Date("2024-10-07"),
+            "precio_uni": 60.0000,
+            "descuento": 5
+        },
+        {
+            "id_venta": 8,
+            "id_usuario": 1,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 7,
+            "fecha": new Date("2024-10-08"),
+            "precio_uni": 20.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 9,
+            "id_usuario": 2,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 8,
+            "fecha": new Date("2024-10-09"),
+            "precio_uni": 20.0000,
+            "descuento": 3
+        },
+        {
+            "id_venta": 10,
+            "id_usuario": 3,
+            "id_sucursal": 5,
+            "id_dulce": 5,
+            "cantidad": 5,
+            "fecha": new Date("2024-10-10"),
+            "precio_uni": 40.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 11,
+            "id_usuario": 4,
+            "id_sucursal": 6,
+            "id_dulce": 1,
+            "cantidad": 9,
+            "fecha": new Date("2024-10-11"),
+            "precio_uni": 50.0000,
+            "descuento": 2
+        },
+        {
+            "id_venta": 12,
+            "id_usuario": 5,
+            "id_sucursal": 6,
+            "id_dulce": 2,
+            "cantidad": 1,
+            "fecha": new Date("2024-10-12"),
+            "precio_uni": 60.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 13,
+            "id_usuario": 6,
+            "id_sucursal": 7,
+            "id_dulce": 3,
+            "cantidad": 2,
+            "fecha": new Date("2024-10-13"),
+            "precio_uni": 20.0000,
+            "descuento": 1
+        },
+        {
+            "id_venta": 14,
+            "id_usuario": 7,
+            "id_sucursal": 7,
+            "id_dulce": 4,
+            "cantidad": 15,
+            "fecha": new Date("2024-10-14"),
+            "precio_uni": 20.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 15,
+            "id_usuario": 1,
+            "id_sucursal": 1,
+            "id_dulce": 5,
+            "cantidad": 8,
+            "fecha": new Date("2024-10-15"),
+            "precio_uni": 40.0000,
+            "descuento": 2
+        },
+        {
+            "id_venta": 16,
+            "id_usuario": 2,
+            "id_sucursal": 2,
+            "id_dulce": 1,
+            "cantidad": 3,
+            "fecha": new Date("2024-10-16"),
+            "precio_uni": 50.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 17,
+            "id_usuario": 3,
+            "id_sucursal": 3,
+            "id_dulce": 2,
+            "cantidad": 4,
+            "fecha": new Date("2024-10-17"),
+            "precio_uni": 60.0000,
+            "descuento": 3
+        },
+        {
+            "id_venta": 18,
+            "id_usuario": 4,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 12,
+            "fecha": new Date("2024-10-18"),
+            "precio_uni": 20.0000,
+            "descuento": 5
+        },
+        {
+            "id_venta": 19,
+            "id_usuario": 5,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 7,
+            "fecha": new Date("2024-10-19"),
+            "precio_uni": 20.0000,
+            "descuento": 0
+        },
+        {
+            "id_venta": 20,
+            "id_usuario": 6,
+            "id_sucursal": 6,
+            "id_dulce": 5,
+            "cantidad": 3,
+            "fecha": new Date("2024-10-20"),
+            "precio_uni": 40.0000,
+            "descuento": 0
+        }
+    ]
+)

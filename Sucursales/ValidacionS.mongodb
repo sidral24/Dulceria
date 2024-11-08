@@ -24,7 +24,7 @@ db.createCollection("sucursales", {
                     uniqueItems: true, //No telefonos repetidos
                     items: { bsonType: 'string' }
                 },
-                domicilio: {
+                direccion: {
                     bsonType: "object",
                     title: 'Validación del objeto Address',
                     required: ['estado', 'municipio', 'colonia', 'calle', 'numero', 'cp'],

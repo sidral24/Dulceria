@@ -1,15 +1,119 @@
 use("Dulceria")
 
 //insertar datos
-db.Trabajadores.insertOne({
-    idTrabajador: 1,
-    idSucursal: 1,
-    apellidoP: 'Salvatierra',
-    apellidoM: 'Del Bosque',
-    nombres: 'Juan',
-    fechaNac: new Date(1997, 6, 12),
-    fechaIngreso: new Date(),
-    rfc: 'asdfhkasfdsdf',
-    tipo: 'asdfasdfa',
-    telefono: ['3536985564']
-})
+db.trabajadores.insertMany(
+    [
+        {
+            "id_trabajador": 1,
+            "id_sucursal": 1,
+            "nombre": {
+                "apellido_paterno": "Sánchez",
+                "apellido_materno": "Gómez",
+                "nombres": "Pedro"
+            },
+            "fecha_nacimiento": "1990-05-15",
+            "fecha_ingreso": "2022-01-10",
+            "rfc": "SAGP900515HDFMPR01",
+            "tipo": "Permanente",
+            "telefono": [
+                "5551234567"
+            ]
+        },
+        {
+            "id_trabajador": 2,
+            "id_sucursal": 1,
+            "nombre": {
+                "apellido_paterno": "López",
+                "apellido_materno": "Martínez",
+                "nombres": "María"
+            },
+            "fecha_nacimiento": "1985-08-22",
+            "fecha_ingreso": "2021-03-15",
+            "rfc": "LOMM850822HDFMTR02",
+            "tipo": "Permanente",
+            "telefono": [
+                "5552345678"
+            ]
+        },
+        {
+            "id_trabajador": 3,
+            "id_sucursal": 2,
+            "nombre": {
+                "apellido_paterno": "Fernández",
+                "apellido_materno": "Hernández",
+                "nombres": "José"
+            },
+            "fecha_nacimiento": "1992-11-30",
+            "fecha_ingreso": "2023-02-20",
+            "rfc": "FEHJ920113HDFMNR03",
+            "tipo": "Temporal",
+            "telefono": [
+                "5553456789"
+            ]
+        },
+        {
+            "id_trabajador": 4,
+            "id_sucursal": 2,
+            "nombre": {
+                "apellido_paterno": "Ramírez",
+                "apellido_materno": "Torres",
+                "nombres": "Ana"
+            },
+            "fecha_nacimiento": "1988-03-12",
+            "fecha_ingreso": "2020-06-25",
+            "rfc": "RATA880312HDFMRA04",
+            "tipo": "Permanente",
+            "telefono": [
+                "5554567890"
+            ]
+        },
+        {
+            "id_trabajador": 5,
+            "id_sucursal": 3,
+            "nombre": {
+                "apellido_paterno": "Martínez",
+                "apellido_materno": "Sánchez",
+                "nombres": "Carlos"
+            },
+            "fecha_nacimiento": "1995-07-05",
+            "fecha_ingreso": "2021-09-01",
+            "rfc": "MASC950705HDFMCR05",
+            "tipo": "Temporal",
+            "telefono": [
+                "5555678901"
+            ]
+        },
+        {
+            "id_trabajador": 6,
+            "id_sucursal": 4,
+            "nombre": {
+                "apellido_paterno": "García",
+                "apellido_materno": "Mendoza",
+                "nombres": "Laura"
+            },
+            "fecha_nacimiento": "1990-12-18",
+            "fecha_ingreso": "2022-11-15",
+            "rfc": "GAML901218HDFMDA06",
+            "tipo": "Permanente",
+            "telefono": [
+                "5556789012"
+            ]
+        },
+        {
+            "id_trabajador": 7,
+            "id_sucursal": 5,
+            "nombre": {
+                "apellido_paterno": "Hernández",
+                "apellido_materno": "Luna",
+                "nombres": "Luis"
+            },
+            "fecha_nacimiento": "1987-04-25",
+            "fecha_ingreso": "2020-05-30",
+            "rfc": "HELU870425HDFMLU07",
+            "tipo": "Temporal",
+            "telefono": [
+                "5557890123"
+            ]
+        }
+    ]
+)

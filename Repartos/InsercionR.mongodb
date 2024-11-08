@@ -1,0 +1,187 @@
+use("Dulceria")
+
+//insertar datos
+db.repartos.insertMany(
+    [
+        {
+            "id_repartos": 2,
+            "id_fabrica": 1,
+            "id_sucursal": 1,
+            "id_trabajador": 1,
+            "id_dulce": 1,
+            "cantidad": 100,
+            "fecha_reparto": new Date("2024-10-01")
+        },
+        {
+            "id_repartos": 3,
+            "id_fabrica": 1,
+            "id_sucursal": 2,
+            "id_trabajador": 2,
+            "id_dulce": 2,
+            "cantidad": 150,
+            "fecha_reparto": new Date("2024-10-02")
+        },
+        {
+            "id_repartos": 4,
+            "id_fabrica": 2,
+            "id_sucursal": 1,
+            "id_trabajador": 3,
+            "id_dulce": 3,
+            "cantidad": 200,
+            "fecha_reparto": new Date("2024-10-03")
+        },
+        {
+            "id_repartos": 5,
+            "id_fabrica": 2,
+            "id_sucursal": 2,
+            "id_trabajador": 1,
+            "id_dulce": 4,
+            "cantidad": 250,
+            "fecha_reparto": new Date("2024-10-04")
+        },
+        {
+            "id_repartos": 6,
+            "id_fabrica": 3,
+            "id_sucursal": 3,
+            "id_trabajador": 2,
+            "id_dulce": 5,
+            "cantidad": 300,
+            "fecha_reparto": new Date("2024-10-05")
+        },
+        {
+            "id_repartos": 7,
+            "id_fabrica": 3,
+            "id_sucursal": 1,
+            "id_trabajador": 3,
+            "id_dulce": 6,
+            "cantidad": 350,
+            "fecha_reparto": new Date("2024-10-06")
+        },
+        {
+            "id_repartos": 8,
+            "id_fabrica": 4,
+            "id_sucursal": 4,
+            "id_trabajador": 1,
+            "id_dulce": 7,
+            "cantidad": 400,
+            "fecha_reparto": new Date("2024-10-07")
+        },
+        {
+            "id_repartos": 9,
+            "id_fabrica": 4,
+            "id_sucursal": 5,
+            "id_trabajador": 2,
+            "id_dulce": 4,
+            "cantidad": 450,
+            "fecha_reparto": new Date("2024-10-08")
+        },
+        {
+            "id_repartos": 10,
+            "id_fabrica": 5,
+            "id_sucursal": 6,
+            "id_trabajador": 3,
+            "id_dulce": 1,
+            "cantidad": 500,
+            "fecha_reparto": new Date("2024-10-09")
+        },
+        {
+            "id_repartos": 11,
+            "id_fabrica": 5,
+            "id_sucursal": 7,
+            "id_trabajador": 1,
+            "id_dulce": 2,
+            "cantidad": 550,
+            "fecha_reparto": new Date("2024-10-10")
+        },
+        {
+            "id_repartos": 12,
+            "id_fabrica": 1,
+            "id_sucursal": 3,
+            "id_trabajador": 2,
+            "id_dulce": 3,
+            "cantidad": 600,
+            "fecha_reparto": new Date("2024-10-11")
+        },
+        {
+            "id_repartos": 13,
+            "id_fabrica": 2,
+            "id_sucursal": 4,
+            "id_trabajador": 3,
+            "id_dulce": 4,
+            "cantidad": 650,
+            "fecha_reparto": new Date("2024-10-12")
+        },
+        {
+            "id_repartos": 14,
+            "id_fabrica": 3,
+            "id_sucursal": 5,
+            "id_trabajador": 1,
+            "id_dulce": 5,
+            "cantidad": 700,
+            "fecha_reparto": new Date("2024-10-13")
+        },
+        {
+            "id_repartos": 15,
+            "id_fabrica": 4,
+            "id_sucursal": 6,
+            "id_trabajador": 2,
+            "id_dulce": 6,
+            "cantidad": 750,
+            "fecha_reparto": new Date("2024-10-14")
+        },
+        {
+            "id_repartos": 16,
+            "id_fabrica": 5,
+            "id_sucursal": 7,
+            "id_trabajador": 3,
+            "id_dulce": 7,
+            "cantidad": 800,
+            "fecha_reparto": new Date("2024-10-15")
+        },
+        {
+            "id_repartos": 17,
+            "id_fabrica": 1,
+            "id_sucursal": 2,
+            "id_trabajador": 1,
+            "id_dulce": 2,
+            "cantidad": 850,
+            "fecha_reparto": new Date("2024-10-16")
+        },
+        {
+            "id_repartos": 18,
+            "id_fabrica": 2,
+            "id_sucursal": 3,
+            "id_trabajador": 2,
+            "id_dulce": 1,
+            "cantidad": 900,
+            "fecha_reparto": new Date("2024-10-17")
+        },
+        {
+            "id_repartos": 19,
+            "id_fabrica": 3,
+            "id_sucursal": 4,
+            "id_trabajador": 3,
+            "id_dulce": 2,
+            "cantidad": 950,
+            "fecha_reparto": new Date("2024-10-18")
+        },
+        {
+            "id_repartos": 20,
+            "id_fabrica": 4,
+            "id_sucursal": 5,
+            "id_trabajador": 1,
+            "id_dulce": 3,
+            "cantidad": 1000,
+            "fecha_reparto": new Date("2024-10-19")
+        },
+        {
+            "id_repartos": 21,
+            "id_fabrica": 5,
+            "id_sucursal": 6,
+            "id_trabajador": 2,
+            "id_dulce": 4,
+            "cantidad": 1050,
+            "fecha_reparto": new Date("2024-10-20")
+        }
+    ]
+)

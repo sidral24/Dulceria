@@ -22,7 +22,7 @@ db.createCollection("repartos", {
 
 
 db.repartos.createIndex(
-    { nom_responsable: 1 },
+    { id_repartos: 1 },
     { unique: true }
 )
 

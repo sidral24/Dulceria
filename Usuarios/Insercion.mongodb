@@ -1,11 +1,91 @@
 use("Dulceria")
 
 //insertar datos
-db.Usuarios.insertOne({
-    idUsuario: 1,
-    apellidoP: 'Hernandez',
-    apellidoM: 'Galvez',
-    nombres: 'Armando',
-    email: 'asdfasfd@gmail.com',
-    telefono: ['3531802654']
-})
+db.usuarios.insertMany(
+    [
+        {
+            "id_usuario": 1,
+            "nombre": {
+                "apellido_paterno": "Sánchez",
+                "apellido_materno": "Gómez",
+                "nombres": "Pedro"
+            },
+            "email": "pedro.sanchez@example.com",
+            "telefono": [
+                "5551234567"
+            ]
+        },
+        {
+            "id_usuario": 2,
+            "nombre": {
+                "apellido_paterno": "López",
+                "apellido_materno": "Martínez",
+                "nombres": "María"
+            },
+            "email": "maria.lopez@example.com",
+            "telefono": [
+                "5552345678"
+            ]
+        },
+        {
+            "id_usuario": 3,
+            "nombre": {
+                "apellido_paterno": "Fernández",
+                "apellido_materno": "Hernández",
+                "nombres": "José"
+            },
+            "email": "jose.fernandez@example.com",
+            "telefono": [
+                "5553456789"
+            ]
+        },
+        {
+            "id_usuario": 4,
+            "nombre": {
+                "apellido_paterno": "Ramírez",
+                "apellido_materno": "Torres",
+                "nombres": "Ana"
+            },
+            "email": "ana.ramirez@example.com",
+            "telefono": [
+                "5554567890"
+            ]
+        },
+        {
+            "id_usuario": 5,
+            "nombre": {
+                "apellido_paterno": "Martínez",
+                "apellido_materno": "Sánchez",
+                "nombres": "Carlos"
+            },
+            "email": "carlos.martinez@example.com",
+            "telefono": [
+                "5555678901"
+            ]
+        },
+        {
+            "id_usuario": 6,
+            "nombre": {
+                "apellido_paterno": "García",
+                "apellido_materno": "Mendoza",
+                "nombres": "Laura"
+            },
+            "email": "laura.garcia@example.com",
+            "telefono": [
+                "5556789012"
+            ]
+        },
+        {
+            "id_usuario": 7,
+            "nombre": {
+                "apellido_paterno": "Hernández",
+                "apellido_materno": "Luna",
+                "nombres": "Luis"
+            },
+            "email": "luis.hernandez@example.com",
+            "telefono": [
+                "5557890123"
+            ]
+        }
+    ]
+)
