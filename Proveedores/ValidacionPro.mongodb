@@ -24,6 +24,6 @@ db.createCollection("Proveedores", {
     }
 })
 db.Proveedores.createIndex(
-    { idProveedor: 1 },
+    { id_proveedor: 1 },
     { unique: true }
 )

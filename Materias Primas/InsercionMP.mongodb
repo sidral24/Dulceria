@@ -1,12 +1,70 @@
 use("Dulceria")
 
 //insertar datos
-db.materias_primas.insertOne({
-    id_mp: 1,
-    nombre: 'Calabaza',
-    tipo: 'Liquido',
-    lote: '20001',
-    existencia: 20,
-    fecha_cad: new Date(),
-    precio: 30
-})
+db.materias_primas.insertMany(
+    [
+        {
+            "id_mp": 1,
+            "nombre": "Azúcar Refinada",
+            "tipo": "Edulcorante",
+            "lote": "L1234",
+            "existencia": "1000 kg",
+            "fecha_cad": new Date("2025-12-31"),
+            "precio": 20
+        },
+        {
+            "id_mp": 2,
+            "nombre": "Cacao en Polvo",
+            "tipo": "Saborizante",
+            "lote": "L5678",
+            "existencia": "500 kg",
+            "fecha_cad": new Date("2024-11-15"),
+            "precio": 45
+        },
+        {
+            "id_mp": 3,
+            "nombre": "Glucosa Líquida",
+            "tipo": "Edulcorante",
+            "lote": "L2345",
+            "existencia": "800 L",
+            "fecha_cad": new Date("2025-06-01"),
+            "precio": 30
+        },
+        {
+            "id_mp": 4,
+            "nombre": "Gelatina sin Sabor",
+            "tipo": "Texturizante",
+            "lote": "L3456",
+            "existencia": "600 kg",
+            "fecha_cad": new Date("2024-09-10"),
+            "precio": 25
+        },
+        {
+            "id_mp": 5,
+            "nombre": "Colorante Rojo",
+            "tipo": "Colorante",
+            "lote": "L4567",
+            "existencia": "200 L",
+            "fecha_cad": new Date("2026-03-22"),
+            "precio": 15
+        },
+        {
+            "id_mp": 6,
+            "nombre": "Esencia de Vainilla",
+            "tipo": "Saborizante",
+            "lote": "L6789",
+            "existencia": "100 L",
+            "fecha_cad": new Date("2024-12-05"),
+            "precio": 50
+        },
+        {
+            "id_mp": 7,
+            "nombre": "Sorbitol",
+            "tipo": "Edulcorante",
+            "lote": "L7890",
+            "existencia": "300 kg",
+            "fecha_cad": new Date("2025-02-14"),
+            "precio": 35
+        }
+    ]
+)

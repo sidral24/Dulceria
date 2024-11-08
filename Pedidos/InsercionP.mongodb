@@ -1,0 +1,167 @@
+use("Dulceria")
+
+//insertar datos
+db.pedidos.insertMany(
+    [
+        {
+            "id_pedido": 2,
+            "id_usuario": 1,
+            "id_sucursal": 1,
+            "id_dulce": 1,
+            "cantidad": 5,
+            "fecha_pedido": new Date("2024-10-01")
+        },
+        {
+            "id_pedido": 3,
+            "id_usuario": 2,
+            "id_sucursal": 1,
+            "id_dulce": 2,
+            "cantidad": 10,
+            "fecha_pedido": new Date("2024-10-02")
+        },
+        {
+            "id_pedido": 4,
+            "id_usuario": 3,
+            "id_sucursal": 2,
+            "id_dulce": 3,
+            "cantidad": 3,
+            "fecha_pedido": new Date("2024-10-03")
+        },
+        {
+            "id_pedido": 5,
+            "id_usuario": 4,
+            "id_sucursal": 2,
+            "id_dulce": 4,
+            "cantidad": 20,
+            "fecha_pedido": new Date("2024-10-04")
+        },
+        {
+            "id_pedido": 6,
+            "id_usuario": 5,
+            "id_sucursal": 3,
+            "id_dulce": 5,
+            "cantidad": 15,
+            "fecha_pedido": new Date("2024-10-05")
+        },
+        {
+            "id_pedido": 7,
+            "id_usuario": 6,
+            "id_sucursal": 3,
+            "id_dulce": 1,
+            "cantidad": 12,
+            "fecha_pedido": new Date("2024-10-06")
+        },
+        {
+            "id_pedido": 8,
+            "id_usuario": 7,
+            "id_sucursal": 4,
+            "id_dulce": 2,
+            "cantidad": 8,
+            "fecha_pedido": new Date("2024-10-07")
+        },
+        {
+            "id_pedido": 9,
+            "id_usuario": 1,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 9,
+            "fecha_pedido": new Date("2024-10-08")
+        },
+        {
+            "id_pedido": 10,
+            "id_usuario": 2,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 11,
+            "fecha_pedido": new Date("2024-10-09")
+        },
+        {
+            "id_pedido": 11,
+            "id_usuario": 3,
+            "id_sucursal": 5,
+            "id_dulce": 5,
+            "cantidad": 14,
+            "fecha_pedido": new Date("2024-10-10")
+        },
+        {
+            "id_pedido": 12,
+            "id_usuario": 4,
+            "id_sucursal": 6,
+            "id_dulce": 1,
+            "cantidad": 18,
+            "fecha_pedido": new Date("2024-10-11")
+        },
+        {
+            "id_pedido": 13,
+            "id_usuario": 5,
+            "id_sucursal": 6,
+            "id_dulce": 2,
+            "cantidad": 6,
+            "fecha_pedido": new Date("2024-10-12")
+        },
+        {
+            "id_pedido": 14,
+            "id_usuario": 6,
+            "id_sucursal": 7,
+            "id_dulce": 3,
+            "cantidad": 7,
+            "fecha_pedido": new Date("2024-10-13")
+        },
+        {
+            "id_pedido": 15,
+            "id_usuario": 7,
+            "id_sucursal": 7,
+            "id_dulce": 4,
+            "cantidad": 25,
+            "fecha_pedido": new Date("2024-10-14")
+        },
+        {
+            "id_pedido": 16,
+            "id_usuario": 1,
+            "id_sucursal": 1,
+            "id_dulce": 5,
+            "cantidad": 30,
+            "fecha_pedido": new Date("2024-10-15")
+        },
+        {
+            "id_pedido": 17,
+            "id_usuario": 2,
+            "id_sucursal": 2,
+            "id_dulce": 1,
+            "cantidad": 4,
+            "fecha_pedido": new Date("2024-10-16")
+        },
+        {
+            "id_pedido": 18,
+            "id_usuario": 3,
+            "id_sucursal": 3,
+            "id_dulce": 2,
+            "cantidad": 5,
+            "fecha_pedido": new Date("2024-10-17")
+        },
+        {
+            "id_pedido": 19,
+            "id_usuario": 4,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 16,
+            "fecha_pedido": new Date("2024-10-18")
+        },
+        {
+            "id_pedido": 20,
+            "id_usuario": 5,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 7,
+            "fecha_pedido": new Date("2024-10-19")
+        },
+        {
+            "id_pedido": 21,
+            "id_usuario": 6,
+            "id_sucursal": 6,
+            "id_dulce": 5,
+            "cantidad": 9,
+            "fecha_pedido": new Date("2024-10-20")
+        }
+    ]
+)

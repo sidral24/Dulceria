@@ -7,7 +7,7 @@ db.createCollection("elaboracion", {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objeto Dulces',
-            required: ['id_dulce', 'id_elaboracion', 'id_fabrica', 'id_trabajdor', 'id_mp', 'cantidad'],
+            required: ['id_elaboracion', 'id_fabrica', 'id_trabajdor', 'id_mp', 'id_dulce', 'cantidad'],
             properties: {
                 id_elaboracion: { bsonType: 'int' },
                 id_fabrica: { bsonType: 'int' },

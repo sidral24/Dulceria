@@ -1,0 +1,167 @@
+use("Dulceria")
+
+//insertar datos
+db.registros.insertMany(
+    [
+        {
+            "id_registro": 1,
+            "id_sucursal": 1,
+            "id_dulce": 1,
+            "cantidad": 50,
+            "fecha_recepcion": new Date("2024-10-01"),
+            "precio_uni": 45.0000
+        },
+        {
+            "id_registro": 2,
+            "id_sucursal": 1,
+            "id_dulce": 2,
+            "cantidad": 30,
+            "fecha_recepcion": new Date("2024-10-02"),
+            "precio_uni": 55.0000
+        },
+        {
+            "id_registro": 3,
+            "id_sucursal": 2,
+            "id_dulce": 3,
+            "cantidad": 40,
+            "fecha_recepcion": new Date("2024-10-03"),
+            "precio_uni": 25.0000
+        },
+        {
+            "id_registro": 4,
+            "id_sucursal": 2,
+            "id_dulce": 4,
+            "cantidad": 60,
+            "fecha_recepcion": new Date("2024-10-04"),
+            "precio_uni": 20.0000
+        },
+        {
+            "id_registro": 5,
+            "id_sucursal": 3,
+            "id_dulce": 5,
+            "cantidad": 20,
+            "fecha_recepcion": new Date("2024-10-05"),
+            "precio_uni": 60.0000
+        },
+        {
+            "id_registro": 6,
+            "id_sucursal": 3,
+            "id_dulce": 1,
+            "cantidad": 100,
+            "fecha_recepcion": new Date("2024-10-06"),
+            "precio_uni": 45.0000
+        },
+        {
+            "id_registro": 7,
+            "id_sucursal": 4,
+            "id_dulce": 2,
+            "cantidad": 70,
+            "fecha_recepcion": new Date("2024-10-07"),
+            "precio_uni": 55.0000
+        },
+        {
+            "id_registro": 8,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 80,
+            "fecha_recepcion": new Date("2024-10-08"),
+            "precio_uni": 25.0000
+        },
+        {
+            "id_registro": 9,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 90,
+            "fecha_recepcion": new Date("2024-10-09"),
+            "precio_uni": 20.0000
+        },
+        {
+            "id_registro": 10,
+            "id_sucursal": 5,
+            "id_dulce": 5,
+            "cantidad": 10,
+            "fecha_recepcion": new Date("2024-10-10"),
+            "precio_uni": 60.0000
+        },
+        {
+            "id_registro": 11,
+            "id_sucursal": 6,
+            "id_dulce": 1,
+            "cantidad": 50,
+            "fecha_recepcion": new Date("2024-10-11"),
+            "precio_uni": 45.0000
+        },
+        {
+            "id_registro": 12,
+            "id_sucursal": 6,
+            "id_dulce": 2,
+            "cantidad": 40,
+            "fecha_recepcion": new Date("2024-10-12"),
+            "precio_uni": 55.0000
+        },
+        {
+            "id_registro": 13,
+            "id_sucursal": 7,
+            "id_dulce": 3,
+            "cantidad": 30,
+            "fecha_recepcion": new Date("2024-10-13"),
+            "precio_uni": 25.0000
+        },
+        {
+            "id_registro": 14,
+            "id_sucursal": 7,
+            "id_dulce": 4,
+            "cantidad": 60,
+            "fecha_recepcion": new Date("2024-10-14"),
+            "precio_uni": 20.0000
+        },
+        {
+            "id_registro": 15,
+            "id_sucursal": 1,
+            "id_dulce": 5,
+            "cantidad": 20,
+            "fecha_recepcion": new Date("2024-10-15"),
+            "precio_uni": 60.0000
+        },
+        {
+            "id_registro": 16,
+            "id_sucursal": 2,
+            "id_dulce": 1,
+            "cantidad": 75,
+            "fecha_recepcion": new Date("2024-10-16"),
+            "precio_uni": 45.0000
+        },
+        {
+            "id_registro": 17,
+            "id_sucursal": 3,
+            "id_dulce": 2,
+            "cantidad": 55,
+            "fecha_recepcion": new Date("2024-10-17"),
+            "precio_uni": 55.0000
+        },
+        {
+            "id_registro": 18,
+            "id_sucursal": 4,
+            "id_dulce": 3,
+            "cantidad": 90,
+            "fecha_recepcion": new Date("2024-10-18"),
+            "precio_uni": 25.0000
+        },
+        {
+            "id_registro": 19,
+            "id_sucursal": 5,
+            "id_dulce": 4,
+            "cantidad": 15,
+            "fecha_recepcion": new Date("2024-10-19"),
+            "precio_uni": 20.0000
+        },
+        {
+            "id_registro": 20,
+            "id_sucursal": 6,
+            "id_dulce": 5,
+            "cantidad": 50,
+            "fecha_recepcion": new Date("2024-10-20"),
+            "precio_uni": 60.0000
+        }
+    ]
+)

@@ -1,16 +1,70 @@
 use("Dulceria")
 
 //insertar datos
-db.Proveedores.insertOne({
-    idProveedor: 1,
-    nombre: 'La coculense',
-    rfc: 'asdasfasf',
-    Direccion: {
-        Calle: 'generica',
-        Ciudad: 'guadalajara',
-        Region: 'Cienega',
-        CodigoPostal: '59342',
-        Pais: 'Mexico',
-    },
-    telefono: ['3539639899']
-})
+db.Proveedores.insertMany(
+    [
+        {
+            "id_proveedor": 1,
+            "nombre": "Azúcares del Valle",
+            "rfc": "AVR123456789",
+            "direccion": "Calle Caramelo 123, Ciudad Dulce",
+            "telefono": [
+                "555-123-4567"
+            ]
+        },
+        {
+            "id_proveedor": 2,
+            "nombre": "Esencias y Sabores S.A.",
+            "rfc": "ESS234567890",
+            "direccion": "Av. Vainilla 234, Colonia Sabrosa",
+            "telefono": [
+                "555-234-5678"
+            ]
+        },
+        {
+            "id_proveedor": 3,
+            "nombre": "Chocolates Finos",
+            "rfc": "CHF345678901",
+            "direccion": "Calle Cacao 345, Ciudad Chocolate",
+            "telefono": [
+                "555-345-6789"
+            ]
+        },
+        {
+            "id_proveedor": 4,
+            "nombre": "Colorantes Naturales",
+            "rfc": "CNL456789012",
+            "direccion": "Calle Arcoíris 456, Colonia Brillante",
+            "telefono": [
+                "555-456-7890"
+            ]
+        },
+        {
+            "id_proveedor": 5,
+            "nombre": "Packaging Dulce",
+            "rfc": "PKD567890123",
+            "direccion": "Av. Empaque 567, Ciudad Envuelta",
+            "telefono": [
+                "555-567-8901"
+            ]
+        },
+        {
+            "id_proveedor": 6,
+            "nombre": "Maquinaria Azucarera",
+            "rfc": "MAZ678901234",
+            "direccion": "Calle Miel 678, Zona Industrial",
+            "telefono": [
+                "555-678-9012"
+            ]
+        },
+        {
+            "id_proveedor": 7,
+            "nombre": "Distribuciones Frutales",
+            "rfc": "DFR789012345",
+            "direccion": "Av. Manzana 789, Colonia Tropical",
+            "telefono": [
+                "555-789-0123"
+            ]
+        }
+    ]
+)

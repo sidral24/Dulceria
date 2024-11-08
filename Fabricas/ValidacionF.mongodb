@@ -2,15 +2,20 @@
 use("Dulceria")
 
 //Crear la conexion de usuarios
+<<<<<<< HEAD
 db.createCollection("Fabricas", {
+=======
+db.createCollection("fabricas", {
+>>>>>>> dbf81c571d3632a3f75a12fc6e0a735355edc163
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            title: 'Validacion del objeto Dulces',
-            required: ['id_fabrica', 'nom_responsable', 'estado', 'municipio', 'domicilio', 'colonia'],
+            title: 'Validacion del objeto fabricas',
+            required: ['id_fabrica', 'nom_responsable'],
             properties: {
                 id_fabrica: { bsonType: 'int' },
                 telefono: { bsonType: 'string' },
+<<<<<<< HEAD
                 nom_responsable: {
                     bsonType: "object",
                     required: ['nombre', 'apellido_parteno'],
@@ -30,6 +35,19 @@ db.createCollection("Fabricas", {
                         Municipio: { bsonType: 'string' },
                         Estado: { bsonType: 'string' },
                         cp: { bsonType: 'int' }
+=======
+                nom_responsable: { bsonType: 'string' },
+                domicilio: {
+                    bsonType: "object",
+                    title: 'Validación del objeto domicilio',
+                    required: ['estado', 'municipio', 'colonia', 'domicilio', 'cp'],
+                    properties: {
+                        estado: { bsonType: 'string' },
+                        municipio: { bsonType: 'string' },
+                        colonia: { bsonType: 'string' },
+                        domicilio: { bsonType: 'string' },
+                        cp: { bsonType: 'int' },
+>>>>>>> dbf81c571d3632a3f75a12fc6e0a735355edc163
                     }
                 }
             }
@@ -38,9 +56,9 @@ db.createCollection("Fabricas", {
 })
 
 
-db.dulces.createIndex(
+db.fabricas.createIndex(
     { nom_responsable: 1 },
     { unique: true }
 )
 
-db.dulces.drop()
+db.fabricas.drop()
