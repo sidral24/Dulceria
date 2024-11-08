@@ -1,13 +1,75 @@
 use("Dulceria")
 
 //insertar datos
-db.dulces.insertOne({
-    id_dulce: 1,
-    nombre: 'Chongo',
-    precio_uni: 20,
-    stock: 20,
-    lote: '20121',
-    fecha_cad: new Date(),
-    reorden: 10,
-    tipo: 'Con Azucar'
-})
+db.dulces.insertMany([
+    {
+        "id_dulce": 1,
+        "nombre": "Ate de Membrillo",
+        "precio_uni": 50.0000,
+        "stock": 100,
+        "lote": "Lote001",
+        "fecha_cad": "2025-12-31",
+        "reorden": 20,
+        "tipo": "CON AZUCAR"
+    },
+    {
+        "id_dulce": 2,
+        "nombre": "Cajeta de Cabra",
+        "precio_uni": 60.0000,
+        "stock": 80,
+        "lote": "Lote002",
+        "fecha_cad": "2025-11-30",
+        "reorden": 15,
+        "tipo": "CON AZUCAR"
+    },
+    {
+        "id_dulce": 3,
+        "nombre": "Dulce de Calabaza",
+        "precio_uni": 30.0000,
+        "stock": 150,
+        "lote": "Lote003",
+        "fecha_cad": "2025-10-15",
+        "reorden": 25,
+        "tipo": "CON AZUCAR"
+    },
+    {
+        "id_dulce": 4,
+        "nombre": "Tamarindo",
+        "precio_uni": 20.0000,
+        "stock": 200,
+        "lote": "Lote004",
+        "fecha_cad": "2025-09-01",
+        "reorden": 30,
+        "tipo": "SIN AZUCAR"
+    },
+    {
+        "id_dulce": 5,
+        "nombre": "Nueces Garapiñadas",
+        "precio_uni": 70.0000,
+        "stock": 90,
+        "lote": "Lote005",
+        "fecha_cad": "2025-12-01",
+        "reorden": 10,
+        "tipo": "CON AZUCAR"
+    },
+    {
+        "id_dulce": 6,
+        "nombre": "Dulce de Leche",
+        "precio_uni": 40.0000,
+        "stock": 120,
+        "lote": "Lote006",
+        "fecha_cad": "2025-12-15",
+        "reorden": 20,
+        "tipo": "CON AZUCAR"
+    },
+    {
+        "id_dulce": 7,
+        "nombre": "Jamón de Frutas",
+        "precio_uni": 45.0000,
+        "stock": 110,
+        "lote": "Lote007",
+        "fecha_cad": "2025-11-15",
+        "reorden": 15,
+        "tipo": "SIN AZUCAR"
+    }
+])

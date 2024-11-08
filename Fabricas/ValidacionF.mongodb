@@ -2,7 +2,7 @@
 use("Dulceria")
 
 //Crear la conexion de usuarios
-db.createCollection("dulces", {
+db.createCollection("Fabricas", {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
@@ -11,12 +11,27 @@ db.createCollection("dulces", {
             properties: {
                 id_fabrica: { bsonType: 'int' },
                 telefono: { bsonType: 'string' },
-                nom_responsable: { bsonType: 'string' },
-                estado: { bsonType: 'string' },
-                municipio: { bsonType: 'string' },
-                colonia: { bsonType: 'string' },
-                domicilio: { bsonType: 'string' },
-                cp: { bsonType: 'int' }
+                nom_responsable: {
+                    bsonType: "object",
+                    required: ['nombre', 'apellido_parteno'],
+                    properties: {
+                        nombre: { bsonType: 'string' },
+                        apellido_paterno: { bsonType: 'string' },
+                        apellido_materno: { bsonType: 'string' }
+                    }
+                },
+                Direccion: {
+                    bsonType: "object",
+                    required: ['Calle', 'Numero', 'Colonia', 'cp'],
+                    properties: {
+                        Calle: { bsonType: 'string' },
+                        Numero: { bsonType: 'string' },
+                        Colonia: { bsonType: 'string' },
+                        Municipio: { bsonType: 'string' },
+                        Estado: { bsonType: 'string' },
+                        cp: { bsonType: 'int' }
+                    }
+                }
             }
         }
     }

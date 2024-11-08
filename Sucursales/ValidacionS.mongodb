@@ -9,7 +9,15 @@ db.createCollection("sucursales", {
             required: ['id_sucursal', 'telefono'],
             properties: {
                 id_sucursal: { bsonType: 'int' },
-                nom_responsable: { bsonType: 'int' },
+                nom_responsable: {
+                    bsonType: "object",
+                    required: ['nombre', 'apellido_parteno'],
+                    properties: {
+                        nombre: { bsonType: 'string' },
+                        apellido_paterno: { bsonType: 'string' },
+                        apellido_materno: { bsonType: 'string' }
+                    }
+                },
                 telefono: {
                     bsonType: 'array',
                     minItems: 1, //Especificar el minimo requerido
@@ -19,12 +27,13 @@ db.createCollection("sucursales", {
                 domicilio: {
                     bsonType: "object",
                     title: 'Validación del objeto Address',
-                    required: ['estado', 'municipio', 'colonia', 'domicilio', 'cp'],
+                    required: ['estado', 'municipio', 'colonia', 'calle', 'numero', 'cp'],
                     properties: {
-                        estado: { bsonType: 'string' },
-                        municipio: { bsonType: 'string' },
+                        calle: { bsonType: 'string' },
+                        numero: { bsonType: 'string' },
                         colonia: { bsonType: 'string' },
-                        domicilio: { bsonType: 'string' },
+                        municipio: { bsonType: 'string' },
+                        estado: { bsonType: 'string' },
                         cp: { bsonType: 'int' },
                     }
                 },
