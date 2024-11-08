@@ -1,80 +1,6 @@
 use("Dulceria")
 
 //insertar datos
-<<<<<<< HEAD
-db.fabricas.insertMany([
-    {
-        "id_fabrica": 1,
-        "telefono": "5551234567",
-        "nom_responsable": "Juan Pérez",
-        "estado": "Ciudad de México",
-        "municipio": "Iztapalapa",
-        "colonia": "Col. Dulce",
-        "domicilio": "Calle Caramelo 123",
-        "cp": 9876
-    },
-    {
-        "id_fabrica": 2,
-        "telefono": "5557654321",
-        "nom_responsable": "María Gómez",
-        "estado": "Jalisco",
-        "municipio": "Guadalajara",
-        "colonia": "Col. Golosina",
-        "domicilio": "Avenida Azúcar 456",
-        "cp": 44100
-    },
-    {
-        "id_fabrica": 3,
-        "telefono": "5558765432",
-        "nom_responsable": "Carlos Ramírez",
-        "estado": "Estado de México",
-        "municipio": "Toluca",
-        "colonia": "Col. Caramelo",
-        "domicilio": "Boulevard Chocolate 789",
-        "cp": 50000
-    },
-    {
-        "id_fabrica": 4,
-        "telefono": "5551357913",
-        "nom_responsable": "Ana Torres",
-        "estado": "Nuevo León",
-        "municipio": "Monterrey",
-        "colonia": "Col. Galleta",
-        "domicilio": "Calle Bombón 321",
-        "cp": 64000
-    },
-    {
-        "id_fabrica": 5,
-        "telefono": "5552468135",
-        "nom_responsable": "Laura Martínez",
-        "estado": "Puebla",
-        "municipio": "Puebla",
-        "colonia": "Col. Menta",
-        "domicilio": "Plaza Dulzura 654",
-        "cp": 72000
-    },
-    {
-        "id_fabrica": 6,
-        "telefono": "5553692587",
-        "nom_responsable": "Luis Sánchez",
-        "estado": "Veracruz",
-        "municipio": "Veracruz",
-        "colonia": "Col. Nube",
-        "domicilio": "Calle Goma 987",
-        "cp": 91700
-    },
-    {
-        "id_fabrica": 7,
-        "telefono": "5551478523",
-        "nom_responsable": "José Hernández",
-        "estado": "Yucatán",
-        "municipio": "Mérida",
-        "colonia": "Col. Regaliz",
-        "domicilio": "Parque Confite 852",
-        "cp": 97000
-    }
-])
-=======
 db.fabricas.insertMany(
     [
         {
@@ -163,4 +89,3 @@ db.fabricas.insertMany(
         }
     ]
 )
->>>>>>> dbf81c571d3632a3f75a12fc6e0a735355edc163
