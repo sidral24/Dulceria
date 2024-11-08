@@ -1,13 +1,207 @@
 use("Dulceria")
 
 //insertar datos
-db.compras.insertOne({
-    id_compra: 1,
-    id_proveedor: 1,
-    id_mp: 1,
-    fecha_compra: new Date(),
-    lote: '29312',
-    cantidad: '20L',
-    precio: 20,
-    descuento: 10
-})
+db.compras.insertMany(
+    [
+        {
+            "id_compra": 1,
+            "id_proveedor": 1,
+            "id_mp": 1,
+            "fecha_compra": new Date("2024-01-15"),
+            "lote": "L1234",
+            "cantidad": "500 kg",
+            "precio": 10000,
+            "descuento": 5
+        },
+        {
+            "id_compra": 2,
+            "id_proveedor": 2,
+            "id_mp": 2,
+            "fecha_compra": new Date("2024-02-01"),
+            "lote": "L5678",
+            "cantidad": "200 kg",
+            "precio": 9000,
+            "descuento": 0
+        },
+        {
+            "id_compra": 3,
+            "id_proveedor": 3,
+            "id_mp": 3,
+            "fecha_compra": new Date("2024-02-10"),
+            "lote": "L2345",
+            "cantidad": "300 L",
+            "precio": 7500,
+            "descuento": 3
+        },
+        {
+            "id_compra": 4,
+            "id_proveedor": 4,
+            "id_mp": 4,
+            "fecha_compra": new Date("2024-03-05"),
+            "lote": "L3456",
+            "cantidad": "400 kg",
+            "precio": 10000,
+            "descuento": 3
+        },
+        {
+            "id_compra": 5,
+            "id_proveedor": 5,
+            "id_mp": 5,
+            "fecha_compra": new Date("2024-03-20"),
+            "lote": "L4567",
+            "cantidad": "100 L",
+            "precio": 3000,
+            "descuento": 2
+        },
+        {
+            "id_compra": 6,
+            "id_proveedor": 6,
+            "id_mp": 6,
+            "fecha_compra": new Date("2024-04-12"),
+            "lote": "L6789",
+            "cantidad": "50 L",
+            "precio": 2500,
+            "descuento": 0
+        },
+        {
+            "id_compra": 7,
+            "id_proveedor": 7,
+            "id_mp": 7,
+            "fecha_compra": new Date("2024-04-25"),
+            "lote": "L7890",
+            "cantidad": "150 kg",
+            "precio": 5250,
+            "descuento": 4
+        },
+        {
+            "id_compra": 8,
+            "id_proveedor": 1,
+            "id_mp": 1,
+            "fecha_compra": new Date("2024-05-10"),
+            "lote": "L1235",
+            "cantidad": "700 kg",
+            "precio": 14000,
+            "descuento": 6
+        },
+        {
+            "id_compra": 9,
+            "id_proveedor": 2,
+            "id_mp": 2,
+            "fecha_compra": new Date("2024-05-20"),
+            "lote": "L5679",
+            "cantidad": "250 kg",
+            "precio": 11250,
+            "descuento": 1
+        },
+        {
+            "id_compra": 10,
+            "id_proveedor": 3,
+            "id_mp": 3,
+            "fecha_compra": new Date("2024-06-01"),
+            "lote": "L2346",
+            "cantidad": "400 L",
+            "precio": 10000,
+            "descuento": 2
+        },
+        {
+            "id_compra": 11,
+            "id_proveedor": 4,
+            "id_mp": 4,
+            "fecha_compra": new Date("2024-06-15"),
+            "lote": "L3457",
+            "cantidad": "300 kg",
+            "precio": 7500,
+            "descuento": 4
+        },
+        {
+            "id_compra": 12,
+            "id_proveedor": 5,
+            "id_mp": 5,
+            "fecha_compra": new Date("2024-07-05"),
+            "lote": "L4568",
+            "cantidad": "120 L",
+            "precio": 3600,
+            "descuento": 2
+        },
+        {
+            "id_compra": 13,
+            "id_proveedor": 6,
+            "id_mp": 6,
+            "fecha_compra": new Date("2024-07-20"),
+            "lote": "L6790",
+            "cantidad": "60 L",
+            "precio": 3000,
+            "descuento": 0
+        },
+        {
+            "id_compra": 14,
+            "id_proveedor": 7,
+            "id_mp": 7,
+            "fecha_compra": new Date("2024-08-10"),
+            "lote": "L7891",
+            "cantidad": "200 kg",
+            "precio": 7000,
+            "descuento": 5
+        },
+        {
+            "id_compra": 15,
+            "id_proveedor": 1,
+            "id_mp": 1,
+            "fecha_compra": new Date("2024-09-01"),
+            "lote": "L1236",
+            "cantidad": "800 kg",
+            "precio": 16000,
+            "descuento": 7
+        },
+        {
+            "id_compra": 16,
+            "id_proveedor": 2,
+            "id_mp": 2,
+            "fecha_compra": new Date("2024-09-15"),
+            "lote": "L5680",
+            "cantidad": "300 kg",
+            "precio": 13500,
+            "descuento": 2
+        },
+        {
+            "id_compra": 17,
+            "id_proveedor": 3,
+            "id_mp": 3,
+            "fecha_compra": new Date("2024-10-01"),
+            "lote": "L2347",
+            "cantidad": "450 L",
+            "precio": 11250,
+            "descuento": 3
+        },
+        {
+            "id_compra": 18,
+            "id_proveedor": 4,
+            "id_mp": 4,
+            "fecha_compra": new Date("2024-10-20"),
+            "lote": "L3458",
+            "cantidad": "350 kg",
+            "precio": 8750,
+            "descuento": 4
+        },
+        {
+            "id_compra": 19,
+            "id_proveedor": 5,
+            "id_mp": 5,
+            "fecha_compra": new Date("2024-11-05"),
+            "lote": "L4569",
+            "cantidad": "150 L",
+            "precio": 4500,
+            "descuento": 3
+        },
+        {
+            "id_compra": 20,
+            "id_proveedor": 6,
+            "id_mp": 6,
+            "fecha_compra": new Date("2024-11-20"),
+            "lote": "L6791",
+            "cantidad": "80 L",
+            "precio": 4000,
+            "descuento": 0
+        }
+    ]
+)

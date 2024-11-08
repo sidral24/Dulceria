@@ -16,7 +16,7 @@ db.createCollection("dulces", {
                 lote: { bsonType: 'string' },
                 fecha_cad: { bsonType: 'date' },
                 reorden: { bsonType: 'int' },
-                tipo: { enum: ['Con Azucar', 'Sin Azucar'] }
+                tipo: { enum: ['CON AZUCAR', 'SIN AZUCAR'] }
             }
         }
     }

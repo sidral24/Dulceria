@@ -13,7 +13,7 @@ db.createCollection("materias_primas", {
                 nombre: { bsonType: 'string' },
                 tipo: { bsonType: 'string' },
                 lote: { bsonType: 'string' },
-                existencia: { bsonType: 'int' },
+                existencia: { bsonType: 'string' },
                 fecha_cad: { bsonType: 'date' },
                 precio: { bsonType: 'int' }
             }

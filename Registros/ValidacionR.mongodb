@@ -22,9 +22,8 @@ db.createCollection("registros", {
 })
 
 
-db.compras.createIndex(
+db.registros.createIndex(
     { id_registro: 1 },
     { unique: true }
 )
 
-db.compras.drop()

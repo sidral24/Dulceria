@@ -7,7 +7,7 @@ db.createCollection("pedidos", {
         $jsonSchema: {
             bsonType: 'object',
             title: 'Validacion del objeto Compras',
-            required: ['id_pedido', 'id_usuario', 'id_sucursal', 'id_dulce', 'cantidad', 'precio'],
+            required: ['id_pedido', 'id_usuario', 'id_sucursal', 'id_dulce', 'cantidad'],
             properties: {
                 id_pedido: { bsonType: 'int' },
                 id_usuario: { bsonType: 'int' },
@@ -22,7 +22,7 @@ db.createCollection("pedidos", {
 })
 
 
-db.compras.createIndex(
+db.pedidos.createIndex(
     { id_pedido: 1 },
     { unique: true }
 )

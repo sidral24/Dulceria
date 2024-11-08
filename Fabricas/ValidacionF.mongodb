@@ -2,30 +2,37 @@
 use("Dulceria")
 
 //Crear la conexion de usuarios
-db.createCollection("dulces", {
+db.createCollection("fabricas", {
     validator: {
         $jsonSchema: {
             bsonType: 'object',
-            title: 'Validacion del objeto Dulces',
-            required: ['id_fabrica', 'nom_responsable', 'estado', 'municipio', 'domicilio', 'colonia'],
+            title: 'Validacion del objeto fabricas',
+            required: ['id_fabrica', 'nom_responsable'],
             properties: {
                 id_fabrica: { bsonType: 'int' },
                 telefono: { bsonType: 'string' },
                 nom_responsable: { bsonType: 'string' },
-                estado: { bsonType: 'string' },
-                municipio: { bsonType: 'string' },
-                colonia: { bsonType: 'string' },
-                domicilio: { bsonType: 'string' },
-                cp: { bsonType: 'int' }
+                domicilio: {
+                    bsonType: "object",
+                    title: 'Validación del objeto domicilio',
+                    required: ['estado', 'municipio', 'colonia', 'domicilio', 'cp'],
+                    properties: {
+                        estado: { bsonType: 'string' },
+                        municipio: { bsonType: 'string' },
+                        colonia: { bsonType: 'string' },
+                        domicilio: { bsonType: 'string' },
+                        cp: { bsonType: 'int' },
+                    }
+                }
             }
         }
     }
 })
 
 
-db.dulces.createIndex(
+db.fabricas.createIndex(
     { nom_responsable: 1 },
     { unique: true }
 )
 
-db.dulces.drop()
+db.fabricas.drop()

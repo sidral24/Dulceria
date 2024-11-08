@@ -1,11 +1,167 @@
 use("Dulceria")
 
 //insertar datos
-db.dulces.insertOne({
-    id_elaboracion: 1,
-    id_fabrica: 1,
-    id_trabajador: 1,
-    id_mp: 1,
-    id_dulce: 1,
-    cantidad: 20
-})
+db.elaboracion.insertMany(
+    [
+        {
+            "id_elaboracion": 1,
+            "id_fabrica": 1,
+            "id_trabajador": 1,
+            "id_mp": 1,
+            "id_dulce": 1,
+            "cantidad": 200
+        },
+        {
+            "id_elaboracion": 2,
+            "id_fabrica": 1,
+            "id_trabajador": 2,
+            "id_mp": 2,
+            "id_dulce": 2,
+            "cantidad": 150
+        },
+        {
+            "id_elaboracion": 3,
+            "id_fabrica": 2,
+            "id_trabajador": 3,
+            "id_mp": 3,
+            "id_dulce": 3,
+            "cantidad": 300
+        },
+        {
+            "id_elaboracion": 4,
+            "id_fabrica": 2,
+            "id_trabajador": 1,
+            "id_mp": 1,
+            "id_dulce": 4,
+            "cantidad": 250
+        },
+        {
+            "id_elaboracion": 5,
+            "id_fabrica": 3,
+            "id_trabajador": 2,
+            "id_mp": 2,
+            "id_dulce": 5,
+            "cantidad": 400
+        },
+        {
+            "id_elaboracion": 6,
+            "id_fabrica": 3,
+            "id_trabajador": 3,
+            "id_mp": 4,
+            "id_dulce": 6,
+            "cantidad": 350
+        },
+        {
+            "id_elaboracion": 7,
+            "id_fabrica": 4,
+            "id_trabajador": 1,
+            "id_mp": 5,
+            "id_dulce": 7,
+            "cantidad": 500
+        },
+        {
+            "id_elaboracion": 8,
+            "id_fabrica": 4,
+            "id_trabajador": 2,
+            "id_mp": 6,
+            "id_dulce": 6,
+            "cantidad": 450
+        },
+        {
+            "id_elaboracion": 9,
+            "id_fabrica": 5,
+            "id_trabajador": 3,
+            "id_mp": 1,
+            "id_dulce": 1,
+            "cantidad": 600
+        },
+        {
+            "id_elaboracion": 10,
+            "id_fabrica": 5,
+            "id_trabajador": 1,
+            "id_mp": 2,
+            "id_dulce": 2,
+            "cantidad": 550
+        },
+        {
+            "id_elaboracion": 11,
+            "id_fabrica": 6,
+            "id_trabajador": 2,
+            "id_mp": 3,
+            "id_dulce": 3,
+            "cantidad": 700
+        },
+        {
+            "id_elaboracion": 12,
+            "id_fabrica": 6,
+            "id_trabajador": 3,
+            "id_mp": 4,
+            "id_dulce": 4,
+            "cantidad": 650
+        },
+        {
+            "id_elaboracion": 13,
+            "id_fabrica": 7,
+            "id_trabajador": 1,
+            "id_mp": 5,
+            "id_dulce": 5,
+            "cantidad": 800
+        },
+        {
+            "id_elaboracion": 14,
+            "id_fabrica": 7,
+            "id_trabajador": 2,
+            "id_mp": 6,
+            "id_dulce": 6,
+            "cantidad": 750
+        },
+        {
+            "id_elaboracion": 15,
+            "id_fabrica": 1,
+            "id_trabajador": 3,
+            "id_mp": 7,
+            "id_dulce": 7,
+            "cantidad": 900
+        },
+        {
+            "id_elaboracion": 16,
+            "id_fabrica": 2,
+            "id_trabajador": 1,
+            "id_mp": 1,
+            "id_dulce": 4,
+            "cantidad": 850
+        },
+        {
+            "id_elaboracion": 17,
+            "id_fabrica": 3,
+            "id_trabajador": 2,
+            "id_mp": 2,
+            "id_dulce": 1,
+            "cantidad": 950
+        },
+        {
+            "id_elaboracion": 18,
+            "id_fabrica": 4,
+            "id_trabajador": 3,
+            "id_mp": 3,
+            "id_dulce": 2,
+            "cantidad": 1000
+        },
+        {
+            "id_elaboracion": 19,
+            "id_fabrica": 5,
+            "id_trabajador": 1,
+            "id_mp": 4,
+            "id_dulce": 3,
+            "cantidad": 1100
+        },
+        {
+            "id_elaboracion": 20,
+            "id_fabrica": 6,
+            "id_trabajador": 2,
+            "id_mp": 5,
+            "id_dulce": 4,
+            "cantidad": 1200
+        }
+    ]
+)

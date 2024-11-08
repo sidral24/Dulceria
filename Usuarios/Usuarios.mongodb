@@ -39,7 +39,7 @@ db.createCollection("usuarios", {
     }
 })
 
-db.Usuarios.createIndex(
+db.usuarios.createIndex(
     {
         email: 1,
         idUsuario: 1
